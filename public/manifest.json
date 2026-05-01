@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Bleach",
+    "version": "1.0.0",
+    "description": "Clear all browsing data except whitelisted domains.",
+    "permissions": ["browsingData", "storage"],
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Bleach"
+    }
+}
