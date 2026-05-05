@@ -2,6 +2,10 @@
 
 A Chrome extension that clears browsing data with support for a domain whitelist.
 
+To see the data you can clear, go to `brave://settings/content/all` for those on Brave, or `chrome://settings/content/all` for those on Chrome.
+
+This will work on all Chromium-based browsers.
+
 ![Screenshot of the Bleach extension](./assets/screenshot.png)
 
 Install node, bun, clone this repository, then install the dependencies
