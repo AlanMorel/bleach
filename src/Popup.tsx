@@ -13,9 +13,15 @@ const CLEANUP_DELAY = 2000;
 function toExcludeOrigins(text: string): string[] {
     return text
         .split("\n")
-        .map(d => d.trim())
+        .map(domain => domain.trim().toLowerCase())
         .filter(Boolean)
-        .flatMap(d => [`https://${d}`, `https://www.${d}`]);
+        .flatMap(domain => {
+            if (domain === "localhost") {
+                return ["http://localhost"];
+            }
+
+            return [`https://${domain}`, `https://www.${domain}`];
+        });
 }
 
 function getButtonText(status: Status): string {
